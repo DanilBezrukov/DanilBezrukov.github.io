@@ -1,10 +1,15 @@
 /** ----------------------------Loader--------------------- **/
 .preloader{
+    max-width: 1920px;
     height: 100%;
     width: 100%;
     position: fixed;
     background-color: #c2c6cb;
     opacity: 10;
+    -moz-animation: preloader 1s forwards 1.3s, preloader_visibility 1s linear 1.3s 1 normal forwards;
+    -webkit-animation: preloader 1s forwards 1.3s, preloader_visibility 1s linear 1.3s 1 normal forwards;
+    -ms-animation: preloader 1s forwards 1.3s, preloader_visibility 1s linear 1.3s 1 normal forwards;
+    -o-animation: preloader 1s forwards 1.3s, preloader_visibility 1s linear 1.3s 1 normal forwards;
     animation: preloader 1s forwards 1.3s, preloader_visibility 1s linear 1.3s 1 normal forwards;
     
 }
@@ -14,6 +19,10 @@
     border: 8px solid rgba(52, 64, 81, 0.6);
     border-radius: 50%;
     border-top-color: rgba(52, 64, 81, 1);
+    -moz-animation: loader 1.5s linear infinite;
+    -webkit-animation: loader 1.5s linear infinite;
+    -ms-animation: loader 1.5s linear infinite;
+    -o-animation: loader 1.5s linear infinite;
     animation: loader 1.5s linear infinite; 
     margin: 350px auto
     
@@ -58,7 +67,9 @@ nav {
     height: 60px;
     background: #344051;
     position: fixed;
-    z-index: 100px;
+    z-index: 2;
+    min-width: 1920px;
+    max-width: 1920px;
 }
 
 
@@ -68,10 +79,11 @@ nav {
     line-height: 60px;
     margin-left: 390px;
     float: left;
-    animation-name: appearance;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    z-index: 3001px;
+    -moz-animation-name: appearance 2s linear;
+    -webkit-animation-name: appearance 2s linear;
+    -ms-animation-name: appearance 2s linear;
+    -o-animation-name: appearance 2s linear;
+    animation-name: appearance 2s linear;
 }
 
 .menu {
@@ -84,17 +96,30 @@ nav {
 }
 .menu li a{
     display: inline-block;
+    -moz-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
     transition: all 0.1s;
     color: white;
     
 }
 .menu li a:hover{
     color: #f18b04;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
 }
 .menu li a:active{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
 }
+
 
 .menu li  {
     float: left;
@@ -103,6 +128,10 @@ nav {
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
+    -moz-animation: appearance_from 0.4s ease 1s forwards;
+    -webkit-animation: appearance_from 0.4s ease 1s forwards;
+    -ms-animation: appearance_from 0.4s ease 1s forwards;
+    -o-animation: appearance_from 0.4s ease 1s forwards;
     animation: appearance_from 0.4s ease 1s forwards;
     opacity: 0;
 }
@@ -111,7 +140,7 @@ nav {
 .main {
     width: 100%;
     height: 1015px;
-    background: url(../img/my_photo.png)100% 100%/auto 962px no-repeat, url(../img/bg.png) center/cover no-repeat;
+    background: url(../img/my_photo.png)100% 100%/auto 962px no-repeat, url(../img/bg.png) 100% 58px/cover no-repeat;
 }
 
 .title__container {
@@ -120,7 +149,15 @@ nav {
     margin-left: 404px;
     color: #213549;
     text-align: center;
+    -moz-animation: appearance_left 1s forwards;
+    -webkit-animation: appearance_left 1s forwards;
+    -ms-animation: appearance_left 1s forwards;
+    -o-animation: appearance_left 1s forwards;
     animation: appearance_left 1s forwards;
+    -moz-animation-delay: 2.3s;
+    -webkit-animation-delay: 2.3s;
+    -ms-animation-delay: 2.3s;
+    -o-animation-delay: 2.3s;
     animation-delay: 2.3s;
     opacity: 0;
 }
@@ -146,6 +183,10 @@ nav {
     color: #697784;
     font-size: 13px;
     margin: 58px 14px 0px 14px;
+    -moz-transition: transform 0.1s 0s linear;
+    -webkit-transition: transform 0.1s 0s linear;
+    -ms-transition: transform 0.1s 0s linear;
+    -o-transition: transform 0.1s 0s linear;
     transition: transform 0.1s 0s linear;
     
         
@@ -155,6 +196,10 @@ nav {
     color: white;
 }
 .title__container input:active{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -206,7 +251,11 @@ h2 {
     
 }
 .obo_mne input:active{
-    transform: scale(1.1)
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .chto_y_umey {
@@ -219,7 +268,6 @@ h2 {
 }
 .chto_y_umey li {
     text-align: center;
-    ;
     color: #e87700;
     float: left;
     font-size: 20px;
@@ -234,7 +282,6 @@ h2 {
     color: #37475a;
     font-size: 10px;
     margin-top: 20px;
-    ;
 }
 
 .chto_y_umey_ul {
@@ -307,13 +354,21 @@ h2 {
     border-radius: 10px;
     color: white;
     font-weight: bold;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    -ms-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
     transition-duration: 0.1s;
 }
 .cases input:hover{
     color: #f4a236;
 }
 .cases input:active{
-    transform: scale(1.1)
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .cost_calculation h3 {
@@ -559,7 +614,11 @@ h2 {
     border-color: #d17700;
 }
 .basement > input:active{
-    transform: scale(1.1)
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
