@@ -1,0 +1,912 @@
+@font-face {
+    font-family: 'franklin_gothic';
+    src: url('../fonts/framd.eot');
+    src: url('../fonts/framd.eot') format('embedded-opentype'),
+         url('../fonts/framd.woff2') format('woff2'),
+         url('../fonts/framd.woff') format('woff'),
+         url('../fonts/framd.ttf') format('truetype'),
+         url('../fonts/framd.svg#framd') format('svg');
+}
+
+/**-----------------------МЕНЮ------------------------------**/
+nav{
+    font-family:'franklin_gothic'; 
+    width: 100%;
+    height: 60px;
+    background: #2a3e51;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+nav>div>div{display: flex;
+    align-items: center;
+    
+}
+
+.logo a{
+    font-size: 23px;
+    color: white;
+    animation: emergence 3s ease 1 normal forwards;
+    text-decoration: none
+}
+@keyframes emergence{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.menu li {
+    float: left;
+    font-size: 14px;
+    list-style: none;
+    margin-left: 40px;
+    opacity: 0;
+    animation: appearance 1s  forwards;
+}
+.menu li:nth-child(1){
+    animation-delay: 0.2s
+}
+.menu li:nth-child(2){
+    animation-delay: 0.5s
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s
+}
+.menu li:nth-child(4){
+    animation-delay: 1.1s
+}
+.menu li:nth-child(5){
+    animation-delay: 1.4s
+}
+.menu li:nth-child(6){
+    animation-delay: 1.7s
+}
+
+@keyframes appearance{
+    0%{
+        opacity: 0;
+        margin-top: -80px
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+.menu a{
+    transition: all 0.3s
+}
+.menu a:hover{
+    color:#f18b04;
+    text-shadow: 0px 0px 15px #f18b04
+    
+}
+
+.menu li:active {
+    transform: scale(1.1)
+}
+@media(max-width:575px){
+    .row_exsm{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .logo{
+        position: absolute;
+        top: 13px;
+        left: 23px;
+    }
+}
+.catalogue a{
+    color: white;
+    background-color: #2a3e51;
+    border:2px solid white;
+    border-color: #2a3e51;
+    
+}
+.catalogue ul{
+    background-color: #2a3e51;
+    border-color: #2a3e51
+}
+.catalogue>div>a{
+    background-color: #2a3e51;
+    border-color: white
+    
+}
+.catalogue a:hover{
+    border-color: #f18b04;
+    color: #f18b04;
+    background-color: #2a3e51
+}
+.catalogue>div>a:focus{
+    background-color: #2a3e51;
+    color: #f18b04;
+    border-color: #f18b04
+}
+.catalogue a:active{
+    background-color: #2a3e51;
+    color: #f18b04;
+    border-color: #f18b04
+}
+.btn-check:active + .btn, .btn-check:checked + .btn, .btn.active, .btn.show, .btn:active {
+  color:#f18b04 ;
+  background-color:#2a3e51 ;
+  border-color:#f18b04 ;
+}
+.catalogue a {
+    animation: rotation 0.6s 1s ease-out ;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+        
+    }
+    25%{
+        transform: rotate(5deg) scale(1.1)
+    }
+    50%{
+        transform: rotate(-5deg) scale(1.1)
+    }
+    75%{
+        transform: rotate(3deg) scale(1.1)
+    }
+    90%{
+        transform: rotate(-3deg) scale(1.1)
+    }
+    
+    100%{
+        transform: rotate(0deg) scale(1)
+    }
+}
+/**-----------------------МЕНЮ------------------------------**/
+
+
+/**-----------------------Гл. страница----------------------**/
+body{
+    width: 100%;
+}
+.title__container{
+    padding-top: 65px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/my_photo11.png)100% 60px/contain no-repeat , url(../img/bg.png) 100% 58px/cover no-repeat;
+    font-family: 'franklin_gothic';
+    text-align: center;
+    box-shadow: inset 0 -100px 30px -100px;
+}
+.title__container > div > div > div {
+    opacity: 0;
+    animation: appearance_left 1s 2.3s forwards;
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes appearance_left {
+     from{
+         opacity: 0;
+        margin-left: -800px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.title__container h1 {
+    width: 100%;
+    font-size: 65px;
+    font-weight: 600;
+    color: #223549;
+}
+.title__container h4{
+    color: #76828f;
+    font-size: 25px;
+    margin-top: 30px;
+    
+}
+.title__container input{
+    border: 2px solid #6f7c89;
+    color: #6f7c89;
+    margin-top: 55px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding:0px 16px;
+    text-align: center;
+    margin: 50px 14px 0px 14px;
+    height: 45px;
+    background: none;
+    transition: 0.1s ;
+    
+}
+.title__container input:hover{
+    color: white;
+    background-color: #223549
+    
+}
+.title__container input:active{
+    transform: scale(1.1)
+}
+
+@media (max-width:991px){
+    .title__container > div > div > div{
+        animation: appearance_left 1s 1.4s forwards;
+    }
+}
+@media (max-width:1399px){
+    .title__container h1, .title__container h4, .title__container input{
+        color: white;
+        border-color: white;
+        position: relative;
+    z-index: 5;
+    }
+    
+    .title__container input:hover{
+    }
+    .title__container::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1;
+        
+    }
+    
+}
+@media (max-width:850px) {
+    .title__container {
+        background: url(../img/my_photo11.png) 0px 60px/cover no-repeat, url(../img/bg.png) 100% 58px/cover no-repeat;
+    }
+    .title__container h1 {
+        font-size: 52px;
+    }
+    .title__container h4 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:450px) {
+    .title__container h1 {
+        font-size: 41px;
+    }
+    .title__container h4 {
+        font-size: 20px;
+    }
+}
+@media (max-width:359px),
+(max-height:350px) {
+    .title__container h1 {
+        font-size: 35px;
+    }
+
+    .title__container h4 {
+        font-size: 17px;
+    }
+
+    .title__container input {
+        font-size: 15px;
+    }
+}
+@media (max-height:500px) {
+    .title__container {
+        background: url(../img/my_photo11.png)100% 60px/contain no-repeat, url(../img/bg.png) 100% 58px/cover no-repeat;
+    }
+}
+/**-----------------------Гл. страница----------------------**/
+
+
+/**-----------------------Обо мне---------------------------**/
+.obo_mne{
+    width: 100%;
+    text-align: center;
+    
+}
+.obo_mne h2{
+    font-family: 'franklin_gothic';
+    padding-top: 108px;
+    color: #223549;
+    font-size: 30px;
+    font-weight: 500;
+}
+.obo_mne h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.avatar{
+    width: 100%;
+}
+.avatar div{
+    border: 0px solid;
+    height: 250px;
+    max-width: 250px;
+    border-radius: 50%;
+    margin: 50px auto 0 auto;
+    background: url(../img/my_photo2.jpg)100% 30%/cover no-repeat;
+}
+.obo_mne p{
+    font-family: Calibri, sans-serif;
+    margin-top: 22px;
+    font-size: 20px;
+    text-align: left;
+    color: #37475a;
+    font-weight: 600;
+}
+.download_resume {
+    font-family: 'franklin_gothic';
+    font-size: 15px;
+    margin: 0 auto;
+    border: 2px solid #6f7180;
+    width: 161px;
+    height: 32px;
+    margin-top: 27px;
+    margin-bottom: 96px;
+    border-radius: 5px;
+    color: #6f7180;
+    transition: 0.5s;
+    transition-property: background-color, color, border-color;
+}
+.download_resume input {
+    font-size: 16px;
+    background: none;
+    color: #6f7180;
+    height: 100%;
+    padding-right: 1px;
+    transition: 0.5s;
+    transition-property:color;
+}
+.download_resume:hover{
+    background-color: #223549;
+    color: white;
+    border-color: #223549;
+}
+.download_resume:hover  input{
+    color: white
+}
+.download_resume:active{
+    transform: scale(1.1);
+}
+/**-----------------------Обо мне---------------------------**/
+
+/**-----------------------Что я умею------------------------**/
+.chto_y_umey{
+    width: 100%;
+    text-align: center;
+    background: url(../img/fon_chto_y_umey.png)center/cover no-repeat;
+    padding-bottom: 100px;
+}
+.chto_y_umey h2{
+    font-family: 'franklin_gothic';
+    padding-top: 108px;
+    color: #223549;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 98px;
+}
+.chto_y_umey h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.chto_y_umey i{
+    font-size: 50px;
+    color: #223549;
+    margin-bottom: 34px;
+    
+}
+.chto_y_umey p{
+    font-size: 20px;
+    color: #f18b04;
+}
+.chto_y_umey span{
+    color: #223549;
+    font-size: 14px;
+}
+@media (max-width:992px){
+    .chto_y_umey i{
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+    .chto_y_umey h2{
+        margin-bottom: 45px;
+    }
+}
+/**-----------------------Что я умею------------------------**/
+
+/**-----------------------Кейсы-----------------------------**/
+.cases{
+    width: 100%;
+    text-align: center;
+}
+.cases h2{
+    font-family: 'franklin_gothic';
+    padding-top: 108px;
+    color: #223549;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.cases h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.cases p{
+    font-family: Calibri, sans-serif;
+    color: #223549;
+    font-size: 14px;
+    margin-bottom: 47px;
+}
+.cases_photo {
+    width: 100%;
+    margin-bottom: 45px;
+
+}
+.cases_photo img{
+    width: 100%;
+}
+.cases_name{
+    text-align: left;
+    color: #223549;
+    
+}
+.cases_name h3{
+    font-family: 'franklin_gothic';
+    font-size: 22px;
+    
+}
+.cases_name p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.cases_name input{
+    text-align: center;
+    background: #00b6af;
+    border-radius: 5px;
+    color: white;
+    height: 44px;
+    width: 200px;
+    font-size: 18px;
+    margin: 7px 0px 22px 0px;
+    font-weight: 900;
+    transition:0.4s;
+    transition-property: color, box-shadow
+    
+}
+.cases_name input:hover{
+    color: #ffa77b;
+    box-shadow: 4px 2px 5px #018b86
+}
+.cases_name input:active{
+    transform: scale(1.1)
+}
+.cases_name_project p{
+    font-size: 18px;
+}
+.cases_name_project h3{
+    margin-bottom: 0px;
+}
+/**-----------------------Кейсы-----------------------------**/
+
+/**-----------------------Расчет стоимости------------------**/
+.calculation_list{
+    font-family: 'franklin_gothic';
+    height: 100%;
+    padding: 0px 47px 0px 52px;
+    color: #223549;
+    margin-top: 141px;
+    box-shadow: 4px 4px 20px 1px;
+}
+.calculation_list h2{
+    text-align: center;
+    margin: 38px 0px 47px 0px;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+.calculation_list h2>a{
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    
+}
+.calculation_list h3{
+    font-size: 25px;
+    margin-bottom: 22px;
+    margin-top: 7px;
+}
+.calculation_list select{
+    display: inline-block;
+    width:100%;
+    height: 57px;
+    padding: 10px;
+    padding-right: 100px;
+    background: #e5e4e4;
+    color: #555555;
+    margin-bottom: 37px;
+    appearance: none;
+    transition: 0.2s
+}
+.calculation_list>div{
+    position: relative;
+}
+.calculation_list i{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    font-size: 20px;
+    pointer-events: none;
+}
+.calculation_list select:hover{
+    color: #2a3e51;
+    box-shadow: 0px 0px 5px #2a3e51;
+}
+.calculation_list select:focus{
+    outline: 1px solid #2a3e51;
+    color: #2a3e51;
+    box-shadow: 0px 0px 5px #2a3e51;
+}
+.calculation_price {
+    border-top: 3px solid #e5e4e4;
+    padding-top: 23px;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+}
+.calculation_price p{
+    display: flex;
+    justify-content: space-between;
+}
+.calculation_price span{
+    font-size: 25px
+}
+.calculation_list input{
+    display:block;
+    margin: 40px auto 37px auto;
+    text-align: center;
+    background: #00b6af;
+    border-radius: 5px;
+    color: white;
+    height: 44px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 900;
+    transition:0.4s;
+    transition-property: color, box-shadow
+}
+.calculation_list input:hover{
+    color: #ffa77b;
+    box-shadow: 4px 2px 5px #018b86
+
+}
+.calculation_list input:active{
+    transform: scale(1.1)
+}
+@media (max-width:575px){
+    .calculation_list h2{
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+    .calculation_list h3{
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+    .calculation_list select{
+        margin-bottom: 15px;
+        height: 40px;
+    }
+    .calculation_list input{
+        width: 150px;
+        height: 36px;
+        font-size: 15px;
+    }
+    .calculation_list{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .calculation_list i{
+        font-size: 16px;
+    }
+}
+/**-----------------------Расчет стоимости------------------**/
+
+/**-----------------------Статистика------------------------**/
+.statistics{
+    margin-top: 30px;
+    text-align: center;
+    background: url(../img/statistics.jpg)center/cover no-repeat;
+    width: 100%;
+    
+}
+.statistics h2{
+    font-family: 'franklin_gothic';
+    padding-top: 108px;
+    color: #223549;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 89px;
+}
+.statistics h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.statistics i{
+    font-size: 60px;
+    color: #f18b04;
+    margin-bottom: 15px;
+    
+}
+.statistics p{
+    font-size: 30px;
+    color: #223549;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.statistics span{
+    display: block;
+    color: #223549;
+    font-size: 18px;
+    margin-bottom: 100px;
+}
+@media (max-width:992px){
+    .statistics i{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .statistics p{
+        margin-bottom: 0px;
+    }
+    .statistics h2{
+        margin-bottom: 45px;
+    }
+    .statistics_icon{
+        height: 172px;
+    }
+}
+/**-----------------------Статистика------------------------**/
+
+/**-----------------------Отзывы----------------------------**/
+.reviews{
+    text-align: center;
+    font-family: 'franklin_gothic';
+    margin-top: 100px;
+}
+.reviews h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #223549;
+}
+.reviews h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.reviews_cont_person{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0px auto 0px auto;
+    margin-top: 57px;
+    background: url(../img/person_references.png)100% 100%/cover no-repeat;
+}
+.reviews_cont p{
+    margin-top:25px;
+    margin-bottom: 0px;
+    color: #223549;
+    font-size: 14px;
+}
+.reviews_cont span{
+    margin: 0px;
+}
+.reviews_cont_points>div{
+    margin: 40px auto 90px auto;
+    width: 60px;
+    height: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.reviews_cont_points>div>div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: left;
+    background-color: #cfd3d8;
+    
+}
+.reviews_cont_points>div>div:nth-child(1){
+    background-color: #f18b04;
+}
+/**-----------------------Отзывы----------------------------**/
+
+/**-----------------------Подвал----------------------------**/
+.basement{
+    font-family: 'franklin_gothic';
+    text-align: center;
+    
+    background: url(../img/bg_contacts.png)center/cover no-repeat;
+    **/
+    height: 1000px;
+}
+.basement h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    margin-top: 100px;
+}
+.basement h2::after{
+    content: "";
+    display:block;
+    padding-top: 31px;
+    margin: 0 auto;
+    width: 70px;
+    border-bottom: 4px solid #f18b04;
+}
+.basement p{
+    margin: 32px 0px 32px 0px;
+    color: white;
+}
+.basement_icon{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.basement_icon span{
+    display: block;
+}
+.basement_icon div{
+    width: 33.3333%
+}
+.basement h4{
+    font-size: 20px;
+    margin: 38px 0px;
+    color: white;
+}
+.basement form{
+    width: 100%;
+}
+.basement form div{
+    display: flex;
+    justify-content: space-between;
+}
+.basement form div input{
+    width: 49%;
+    line-height: 34px;
+    text-indent: 2%;
+    transition: 0.2s;
+}
+.basement form div input:hover{
+    box-shadow: 0px 0px 10px #f18b04
+}
+.basement form div input:focus{
+    box-shadow: 0px 0px 10px #f18b04 
+}
+.basement textarea{
+    margin-top: 1.5%;
+    width: 100%;
+    height: 95px;
+    text-align: left;
+    text-indent: 1%;
+    resize: none;
+    padding-top: 7px;
+    transition: 0.2s;
+}
+.basement textarea:hover{
+    box-shadow: 0px 0px 10px #f18b04
+}
+.basement textarea:focus{
+    box-shadow: 0px 0px 10px #f18b04
+}
+.basement form>input{
+    margin: 38px 0px 168px 0px;
+    background: none;
+    width: 120px;
+    line-height: 40px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.basement form>input:hover{
+    color: #f18b04;
+    border-color: #f18b04;
+}
+.basement form>input:active{
+    transform: scale(1.1);
+}
+.basement i{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+@media(max-width:767px) {
+    .basement_icon {
+        margin: 0 auto;
+        font-size: 13px;
+        width: 100%
+    }
+
+    .basement h4 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 17px;
+
+    }
+
+    .basement p {
+        margin: 15px 0px 32px 0px;
+    }
+
+    .basement form div input {
+        line-height: 25px;
+    }
+
+    .basement textarea {
+        height: 70px;
+        padding-top: 0px;
+    }
+
+    .basement form > input {
+        margin-top: 20px;
+    }
+    .basement form{
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+
+.map{
+    background: url(../img/map.png)center/cover no-repeat;
+    height: 295px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map div{
+    font-weight: 900;
+    height: 48px;
+    width: 135px;
+    text-align: center;
+    line-height: 48px;
+    background-color: white;
+}
+
+.bottom{
+    font-family: arial, sans-serif;
+    text-align: center;
+    height: 40px;
+    background: #2a3e51;
+    color: white;
+    line-height: 40px;
+}
+.bottom p{
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+/**-----------------------Подвал----------------------------**/
